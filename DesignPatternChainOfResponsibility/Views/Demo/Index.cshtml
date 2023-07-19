@@ -1,0 +1,43 @@
+﻿
+@{
+    Layout = null;
+}
+
+<link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+<div class="container">
+    <br /><br />
+    <button class="btn btn-warning" id="btn1">Buton1</button>
+    <br /><br />
+    <button class="btn btn-primary" id="btn2" >Buton2</button>
+    <br /><br />
+    <button class="btn btn-dark" id="btn3">Buton3</button>
+    <br /><br />
+    <button class="btn btn-dark" id="btn4">Buton4</button>
+</div>
+
+<script>
+    $("#btn1").click(function () {
+        alert('Merhaba burası bir mesaj kutusudur');
+    })
+
+    $("#btn2").click(function()
+    {
+        swal('Burası 2. Alert')
+    })
+    $("#btn3").click(function () {
+        swal("Aferin!", "Butona Tıkladınız", "success");
+
+    })
+
+    $("#btn4").click(function () {
+        swal("Buraya Müşteriyi Giriniz:", {
+            content: "input",
+        })
+            .then((value) => {
+                swal(`Müşteri: ${value}`);
+            });
+    })
+</script>
